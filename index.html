@@ -1,59 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Scrolling Site</title>
+    <title>USH Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="flex flex-col">
-    <section id="section1" class="parallax-section bg-cover bg-center h-screen bg-fixed" style="background-image: url('https://picsum.photos/1920/1080');">
-        <div class="info-box mx-auto mt-1/4 text-center">
-            <h2 class="text-4xl font-bold">Section 1</h2>
-            <p class="text-xl">Content for section 1.</p>
+<body>
+    <div class="flex fixed z-50 flex-col justify-center items-center w-screen h-screen bg-white lg:hidden md:hidden">
+        Hey there! Looks like you're on a device with a smaller screen. This site was designed for desktop, so if you're on a phone, it won't look quite right.
+    </div>
+    <section class="relative parallax bg1">
+        <div class="flex flex-col justify-center items-center w-screen h-screen content">
+            <p id="title-1" class="text-5xl font-bold text-white"></p>
+            <i class="absolute bottom-36 text-2xl text-white animate-bounce transform -translate-y-1/2 fas fa-arrow-down"></i>
+            <p id="content-1"></p>
         </div>
     </section>
-    <section id="section2" class="parallax-section bg-cover bg-center h-screen bg-fixed" style="background-image: url('https://picsum.photos/1920/1080');">
-        <div class="info-box mx-auto mt-1/4 text-center">
-            <h2 class="text-4xl font-bold">Section 2</h2>
-            <p class="text-xl">Content for section 2.</p>
-        </div>
-    </section>
-    <section id="section3" class="parallax-section bg-cover bg-center h-screen bg-fixed" style="background-image: url('https://picsum.photos/1920/1080');">
-        <div class="info-box mx-auto mt-1/4 text-center">
-            <h2 class="text-4xl font-bold">Section 3</h2>
-            <p class="text-xl">Content for section 3.</p>
-        </div>
-    </section>
-    <section id="section4" class="parallax-section bg-cover bg-center h-screen bg-fixed" style="background-image: url('https://picsum.photos/1920/1080');">
-        <div class="info-box mx-auto mt-1/4 text-center">
-            <h2 class="text-4xl font-bold">Section 4</h2>
-            <p class="text-xl">Content for section 4.</p>
-        </div>
-    </section>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-$(document).ready(function() {
-    // Parallax effect
-    $('.parallax-section').simpleParallax();
+    
 
-    // Fading backgrounds
-    $(window).scroll(function() {
-        var scrollPos = $(this).scrollTop();
-        $('.parallax-section').each(function() {
-            var sectionTop = $(this).offset().top;
-            var sectionHeight = $(this).outerHeight();
-            var opacity = 1 - (scrollPos - sectionTop) / sectionHeight;
-            if (opacity > 0) {
-                $(this).css('background-color', 'rgba(255, 255, 255, ' + opacity + ')');
-            } else {
-                $(this).css('background-color', 'transparent');
-            }
-        });
-    });
-});
+    <section class="parallax bg2">
+        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content bg-white/20">
+           <h1 id="title-2" class="text-2xl font-bold text-white"></h1>
+           <div id="content-2"></div>
+        </div>
+    </section>
 
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+  
+    <section class="parallax bg3">
+        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content bg-white/20">
+           <h1 id="title-3" class="text-2xl font-bold text-white"></h1>
+           <div id="content-3"></div>
+        </div>
+    </section>
+
+
+  
+    <section class="parallax bg4">
+        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content bg-white/20">
+           <h1 id="title-4" class="text-2xl font-bold text-white"></h1>
+           <div id="content-4"></div>
+        </div>
+    </section>
+
+
+ 
+    <section class="parallax bg5">
+        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content bg-white/20">
+           <h1 id="title-5" class="text-2xl font-bold text-white"></h1>
+           <div id="content-5"></div>
+        </div>
+    </section>
 
 </body>
+<style>
+    section {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg1 {
+    background: url('images/title.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+.bg2 {
+    background: url('https://picsum.photos/id/238/1920/1080') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+.bg3 {
+    background: url('https://picsum.photos/id/239/1920/1080') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+
+.bg4 {
+    background: url('https://picsum.photos/id/240/1920/1080') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+.bg5 {
+    background: url('https://picsum.photos/id/241/1920/1080') no-repeat center center fixed; 
+    background-size: cover;
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>
+<script>
+    window.addEventListener('scroll', function() {
+    let scrollPosition = window.scrollY;
+
+    document.querySelectorAll('.parallax').forEach(function(section) {
+        let speed = section.dataset.speed;
+        section.style.backgroundPosition = 'center ' + scrollPosition * speed + "px";
+    });
+});
+</script>
+<script src="index.js"></script>
 </html>
