@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     cssmin: {
       target: {
         files: {
-          'index.css': ['index.css']
+          'style.css': ['style.css']
         }
       }
     },
