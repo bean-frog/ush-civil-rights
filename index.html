@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Site</title>
+</head>
+<body class="flex flex-col">
+    <section id="section1" class="parallax-section bg-cover bg-center h-screen bg-fixed" style="background-image: url('https://picsum.photos/1920/1080');">
+        <div class="info-box mx-auto mt-1/4 text-center">
+            <h2 class="text-4xl font-bold">Section 1</h2>
+            <p class="text-xl">Content for section 1.</p>
+        </div>
+    </section>
+    <section id="section2" class="parallax-section bg-cover bg-center h-screen bg-fixed" style="background-image: url('https://picsum.photos/1920/1080');">
+        <div class="info-box mx-auto mt-1/4 text-center">
+            <h2 class="text-4xl font-bold">Section 2</h2>
+            <p class="text-xl">Content for section 2.</p>
+        </div>
+    </section>
+    <section id="section3" class="parallax-section bg-cover bg-center h-screen bg-fixed" style="background-image: url('https://picsum.photos/1920/1080');">
+        <div class="info-box mx-auto mt-1/4 text-center">
+            <h2 class="text-4xl font-bold">Section 3</h2>
+            <p class="text-xl">Content for section 3.</p>
+        </div>
+    </section>
+    <section id="section4" class="parallax-section bg-cover bg-center h-screen bg-fixed" style="background-image: url('https://picsum.photos/1920/1080');">
+        <div class="info-box mx-auto mt-1/4 text-center">
+            <h2 class="text-4xl font-bold">Section 4</h2>
+            <p class="text-xl">Content for section 4.</p>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+$(document).ready(function() {
+    // Parallax effect
+    $('.parallax-section').simpleParallax();
+
+    // Fading backgrounds
+    $(window).scroll(function() {
+        var scrollPos = $(this).scrollTop();
+        $('.parallax-section').each(function() {
+            var sectionTop = $(this).offset().top;
+            var sectionHeight = $(this).outerHeight();
+            var opacity = 1 - (scrollPos - sectionTop) / sectionHeight;
+            if (opacity > 0) {
+                $(this).css('background-color', 'rgba(255, 255, 255, ' + opacity + ')');
+            } else {
+                $(this).css('background-color', 'transparent');
+            }
+        });
+    });
+});
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+
+</body>
+</html>
