@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interactive map</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+       
+        }
+        #fix {
+            display: flex;
+            flex-direction: column;;
+            align-items: center;
+            justify-content: center;
+         
+        }
+        #map {
+            width: 1280px;
+            height: 720px;
+            background-color: #242526;
+        }
+        #modal {
+            position:absolute;
+            z-index: 30;
+            display: flex;
+            flex-direction: column;;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: white;
+            margin-top: 500px;
+            position: absolute;
+            max-width: 600px;
+            box-shadow: 3px 3px 7px black;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    
+<section id="fix">
+    <main id="modal"></main>
+</section>
+    <div id="map"></div>
+
+
+<script src="poi.js"></script>
+<script src="map.js"></script>
+</body>
+</html>

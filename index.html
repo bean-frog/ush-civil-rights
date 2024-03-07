@@ -50,6 +50,19 @@
            <div id="content-5"></div>
         </div>
     </section>
+    <section class="parallax bg6">
+        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg content">
+            <iframe class="w-screen h-screen" style="overflow:hidden; overflow-y: hidden; margin-top: 150px" src="map/index.html" scrolling="no"></iframe>
+            <div id="content-6"></div>
+        </div>
+    </section>
+    
+    <section class="parallax bg7">
+        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content">
+           <h1 id="title-7" class="text-2xl font-bold text-white">Thanks ffor viewing!</h1>
+           <div id="content-7"></div>
+        </div>
+    </section>
 </body>
 <style>
     section {
@@ -83,6 +96,12 @@
     background: url('images/slide4.jpg') no-repeat center center fixed; 
     background-size: cover;
 }
+.bg6 {
+    background-color: #242526
+}
+.bg7 {
+    background-color: #242526
+}
 .content {
     position: absolute;
     top: 50%;
@@ -98,6 +117,7 @@
     transform: translate(-50%, -50%);
     background-color: rgba(36, 37, 38, 0.6);
 }
+
 </style>
 <script>
     window.addEventListener('scroll', function() {
