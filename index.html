@@ -10,7 +10,7 @@
         Hey there! Looks like you're on a device with a smaller screen. This site was designed for desktop, so if you're on a phone, it won't look quite right.
     </div>
     <section class="relative parallax bg1">
-        <div class="flex flex-col justify-center items-center w-screen h-screen content">
+        <div class="flex flex-col justify-center items-center w-screen h-screen tscontent">
             <p id="title-1" class="text-6xl font-bold text-white"></p>
             <i class="absolute bottom-36 text-2xl text-white animate-bounce transform -translate-y-1/2 fas fa-arrow-down"></i>
             <p id="content-1"></p>
@@ -19,7 +19,7 @@
     
 
     <section class="parallax bg2">
-        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content bg-white/20">
+        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content">
            <h1 id="title-2" class="text-2xl font-bold text-white"></h1>
            <div id="content-2"></div>
         </div>
@@ -27,7 +27,7 @@
 
   
     <section class="parallax bg3">
-        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content bg-white/20">
+        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content">
            <h1 id="title-3" class="text-2xl font-bold text-white"></h1>
            <div id="content-3"></div>
         </div>
@@ -36,7 +36,7 @@
 
   
     <section class="parallax bg4">
-        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content bg-white/20">
+        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content">
            <h1 id="title-4" class="text-2xl font-bold text-white"></h1>
            <div id="content-4"></div>
         </div>
@@ -45,7 +45,7 @@
 
  
     <section class="parallax bg5">
-        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content bg-white/20">
+        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content">
            <h1 id="title-5" class="text-2xl font-bold text-white"></h1>
            <div id="content-5"></div>
         </div>
@@ -64,7 +64,7 @@
 }
 
 .bg2 {
-    background: url('https://picsum.photos/id/238/1920/1080') no-repeat center center fixed; 
+    background: url('images/slide1.jpg') no-repeat center center fixed; 
     background-size: cover;
 }
 
@@ -88,6 +88,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: rgba(36, 37, 38, 0.6);
+    max-width: 700px;
+}
+.tscontent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(36, 37, 38, 0.6);
 }
 </style>
 <script>
