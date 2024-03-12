@@ -51,20 +51,33 @@
         </div>
     </section>
     <section class="parallax bg6">
+            <div id="modal-container">
+                <div id="modal" class="flex flex-col justify-center p-6"></div>
+            </div>
+
         <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg content">
-            <iframe class="w-screen h-screen" style="overflow:hidden; overflow-y: hidden; margin-top: 150px" src="map/index.html" scrolling="no"></iframe>
+            <iframe class="w-screen h-screen" style="overflow:hidden; overflow-y: hidden; margin-top: 150px; width: 1280px; margin-left: 500px" src="map/index.html" scrolling="no"></iframe>
             <div id="content-6"></div>
         </div>
     </section>
     
     <section class="parallax bg7">
         <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content">
-           <h1 id="title-7" class="text-2xl font-bold text-white">Thanks ffor viewing!</h1>
+           <h1 id="title-7" class="text-2xl font-bold text-white">Thanks for viewing!</h1>
            <div id="content-7"></div>
         </div>
     </section>
 </body>
 <style>
+#modal-container {
+    height: 80vh;
+    width: 500px;
+    background-color: #fff;
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 30
+}
     section {
     min-height: 100vh;
     position: relative;
@@ -117,8 +130,9 @@
     transform: translate(-50%, -50%);
     background-color: rgba(36, 37, 38, 0.6);
 }
-
+ 
 </style>
+<script src="map/poi.js"></script>
 <script>
     window.addEventListener('scroll', function() {
     let scrollPosition = window.scrollY;
@@ -128,6 +142,16 @@
         section.style.backgroundPosition = 'center ' + scrollPosition * speed + "px";
     });
 });
+  function showEvent(id) {
+    document.getElementById('modal').style.display = 'flex';
+    document.getElementById('modal').innerHTML = ``;
+    document.getElementById('modal').innerHTML = poi[id].html;
+    
+  }
+window.addEventListener('message', function(event) {
+   showEvent(event.data)
+});
+
 </script>
 <script src="index.js"></script>
 </html>

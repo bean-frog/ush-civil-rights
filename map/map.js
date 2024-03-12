@@ -107,29 +107,38 @@ $('a').on('click touchend', function() {
 });
 }
 const pointsOfInterest =  [
-    { name: "0", x: 0.1, y: 0.1 }
+    { name: "0", x: 0.17, y: 0.37 }, // Mendez v. Westminster
+    { name: "1", x: 0.36, y: 0.55 }, // El Primer Congreso Mexicanista
+    { name: "2", x: 0.37, y: 0.52 },  // Pecan Shellers Strike
+    { name: "3", x: 0.165, y: 0.365 }, // East LA Walkouts
+    { name: "4", x: 0.223, y: 0.4 }, // Miranda v. Arizona
+    { name: "5", x: 0.17, y: 0.34 }, // United Farm Workers Union
 ];
 
   function drawPointsOfInterest(mapElement, points) {
-    const mapBox =document.querySelector(`${mapElement}`).getBoundingClientRect();
-  
-    points.forEach(point => {
-      const x = mapBox.x + point.x * mapBox.width;
-      const y = mapBox.y + point.y * mapBox.height;
-  
-      const circle = R.circle(x, y, 5).attr({ fill: "red", cursor: "pointer" });
-      console.log(circle)
-      circle.node.addEventListener("click", () => {
-        showEvent(point.name)
-      });
-    });
-  }
-  drawPointsOfInterest("div", pointsOfInterest);
+    const mapBox = document.querySelector(`${mapElement}`).getBoundingClientRect();
 
-  function showEvent(id) {
-    document.getElementById('modal').style.display = 'flex';
-    document.getElementById('modal').innerHTML = ``;
-    document.getElementById('modal').innerHTML = content[id].html;
-    
-  }
+    points.forEach(point => {
+        const x = mapBox.x + point.x * mapBox.width;
+        const y = mapBox.y + point.y * mapBox.height;
+
+        const circle = R.circle(x, y, 5).attr({ fill: "red", cursor: "pointer" });
+
+        circle.node.addEventListener("mouseover", () => {
+            circle.attr({ r: 6 });
+        });
+
+        circle.node.addEventListener("mouseout", () => {
+            circle.attr({ r: 5 });
+        });
+
+        circle.node.addEventListener("click", () => {
+            window.parent.postMessage(point.name, "*");
+        });
+    });
+}
+
+drawPointsOfInterest("div", pointsOfInterest);
+
+
 
