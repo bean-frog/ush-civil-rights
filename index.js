@@ -46,9 +46,9 @@ content.forEach((slide) => {
 
     //offset handler
     if (slide.align === 'l') {
-        sectionElement.style.transform = 'translateX(-120%)';
+        sectionElement.style.transform = 'translateX(-115%)';
     } else if (slide.align === 'r') {
-        sectionElement.style.transform = 'translateX(20%)';
+        sectionElement.style.transform = 'translateX(15%)';
     } else {
      
     }
