@@ -29,7 +29,7 @@ const content = [
         "id":"5",
         "align": "r",
         "title": "1945 - Mendez v. Westminster",
-        "contentHTML": "The 1945 Mendez v. Westminster court case was a landmark case for Civil Rights, serving as a pecedent for the famous Brown v. BoE case. In the case, the Mendez family had their children attending White schools previously without a problem (as Mexican Americans were considered White), but upon moving to Westminster were forced to attend segregated Mexican-only schools. This was because starting in the 1940s, some districts began segregating students by language, claiming that Mexican children had special needs because they spoke Spanish. The The family sued the Westminster School District, and won. "
+        "contentHTML": "The 1945 Mendez v. Westminster court case was a landmark case for Civil Rights, serving as a precedent for the famous Brown v. BoE case. In the case, the Mendez family had their children attending White schools previously without a problem (as Mexican Americans were considered White), but upon moving to Westminster were forced to attend segregated Mexican-only schools. This was because starting in the 1940s, some districts began segregating students by language, claiming that Mexican children had special needs because they spoke Spanish. The The family sued the Westminster School District, and won. "
     },
     
 ]

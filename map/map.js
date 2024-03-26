@@ -113,6 +113,7 @@ const pointsOfInterest =  [
     { name: "3", x: 0.165, y: 0.365 }, // East LA Walkouts
     { name: "4", x: 0.223, y: 0.4 }, // Miranda v. Arizona
     { name: "5", x: 0.17, y: 0.34 }, // United Farm Workers Union
+    { name: "6", x: 0.39, y: 0.53 }  // Hernandez v. Texas
 ];
 
   function drawPointsOfInterest(mapElement, points) {
@@ -135,6 +136,7 @@ const pointsOfInterest =  [
         circle.node.addEventListener("click", () => {
             window.parent.postMessage(point.name, "*");
         });
+        
     });
 }
 
