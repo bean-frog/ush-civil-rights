@@ -65,8 +65,8 @@
     </section>
     
     <section class="parallax bg7">
-        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md content">
-           <h1 id="title-7" class="text-2xl font-bold text-white">Thanks for viewing!</h1>
+        <div class="flex flex-col justify-center items-center p-6 text-white rounded-lg border border-white border-solid backdrop-blur-md widercontent">
+           <h1 id="title-7" class="text-2xl font-bold text-white"></h1>
            <div id="content-7"></div>
         </div>
     </section>
@@ -131,7 +131,7 @@
     background-color: #242526
 }
 .bg7 {
-    background-color: #303233
+    background-color: #303233;
 }
 .content {
     position: absolute;
@@ -147,6 +147,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(36, 37, 38, 0.6);
+}
+.widercontent {
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(36, 37, 38, 0.6);
+    max-width: 700px;
 }
  .image {
     max-height: 300px;

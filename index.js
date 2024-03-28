@@ -31,6 +31,25 @@ const content = [
         "title": "1945 - Mendez v. Westminster",
         "contentHTML": "The 1945 Mendez v. Westminster court case was a landmark case for Civil Rights, serving as a precedent for the famous Brown v. BoE case. In the case, the Mendez family had their children attending White schools previously without a problem (as Mexican Americans were considered White), but upon moving to Westminster were forced to attend segregated Mexican-only schools. This was because starting in the 1940s, some districts began segregating students by language, claiming that Mexican children had special needs because they spoke Spanish. The The family sued the Westminster School District, and won. "
     },
+    {
+        "id":"7",
+        "align": "c",
+        "title": "Thanks for viewing!",
+        "contentHTML": `
+            <h1 class="font-bold text-xl">Sources:</h1>
+            <ul class="ml-4 text-md">
+    <li><a href="https://guides.loc.gov/latinx-civil-rights">https://guides.loc.gov/latinx-civil-rights</a></li>
+    <li><a href="https://law.justia.com/cases/federal/district-courts/FSupp/64/544/1952972/">https://law.justia.com/cases/federal/district-courts/FSupp/64/544/1952972/</a></li>
+    <li><a href="https://guides.loc.gov/latinx-civil-rights/mendez-v-westminster">https://guides.loc.gov/latinx-civil-rights/mendez-v-westminster</a></li>
+    <li><a href="https://www.britannica.com/event/East-L-A-walkouts">https://www.britannica.com/event/East-L-A-walkouts</a></li>
+    <li><a href="https://www.oyez.org/cases/1965/759">https://www.oyez.org/cases/1965/759</a></li>
+    <li><a href="https://guides.loc.gov/latinx-civil-rights/united-farm-workers-union">https://guides.loc.gov/latinx-civil-rights/united-farm-workers-union</a></li>
+    <li><a href="https://www.history.com/this-day-in-history/supreme-court-ruling-hernandez-v-texas">https://www.history.com/this-day-in-history/supreme-court-ruling-hernandez-v-texas</a></li>
+</ul>
+
+
+        `
+    }
     
 ]
 content.forEach((slide) => {
